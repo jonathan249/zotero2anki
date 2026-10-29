@@ -1,0 +1,59 @@
+<vbox id="zotero2anki-prefpane" onload="Zotero2AnkiPrefs.init()"
+      xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <groupbox>
+    <label><html:h2>Anki connection</html:h2></label>
+    <hbox align="center">
+      <label value="AnkiConnect URL:"/>
+      <html:input type="text" id="z2a-url" size="30"
+                  preference="extensions.zotero2anki.ankiConnectURL"/>
+      <button label="Test connection" oncommand="Zotero2AnkiPrefs.test()"/>
+    </hbox>
+    <label id="z2a-status" value=""/>
+  </groupbox>
+
+  <groupbox>
+    <label><html:h2>Deck</html:h2></label>
+    <hbox align="center">
+      <label value="Default deck:"/>
+      <menulist id="z2a-deck" oncommand="Zotero2AnkiPrefs.onDeckChange()">
+        <menupopup/>
+      </menulist>
+      <button label="Refresh decks" oncommand="Zotero2AnkiPrefs.refreshDecks()"/>
+    </hbox>
+    <label value="You can also switch decks in the “Anki card” section of the reader sidebar."/>
+  </groupbox>
+
+  <groupbox>
+    <label><html:h2>Cards</html:h2></label>
+    <radiogroup id="z2a-cardtype" preference="extensions.zotero2anki.cardType">
+      <radio value="basic" label="Basic by default: sent text goes on the back, you write the question"/>
+      <radio value="cloze" label="Cloze by default: sent text becomes the cloze text"/>
+    </radiogroup>
+    <hbox align="center">
+      <label value="Tags (space-separated):"/>
+      <html:input type="text" size="30" preference="extensions.zotero2anki.tags"/>
+    </hbox>
+    <checkbox label="Tag Zotero annotations with “anki” after sending them"
+              preference="extensions.zotero2anki.tagAnnotation"/>
+    <checkbox label="Allow duplicate cards"
+              preference="extensions.zotero2anki.allowDuplicates"/>
+  </groupbox>
+
+  <groupbox>
+    <label><html:h2>Note types (advanced)</html:h2></label>
+    <label value="Change these only if your Anki note types or fields have different names."/>
+    <hbox align="center">
+      <label value="Basic note type / front / back:"/>
+      <html:input type="text" size="12" preference="extensions.zotero2anki.basicNoteType"/>
+      <html:input type="text" size="10" preference="extensions.zotero2anki.basicFrontField"/>
+      <html:input type="text" size="10" preference="extensions.zotero2anki.basicBackField"/>
+    </hbox>
+    <hbox align="center">
+      <label value="Cloze note type / text / extra:"/>
+      <html:input type="text" size="12" preference="extensions.zotero2anki.clozeNoteType"/>
+      <html:input type="text" size="10" preference="extensions.zotero2anki.clozeTextField"/>
+      <html:input type="text" size="10" preference="extensions.zotero2anki.clozeExtraField"/>
+    </hbox>
+  </groupbox>
+</vbox>

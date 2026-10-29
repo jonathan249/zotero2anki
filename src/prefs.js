@@ -1,0 +1,12 @@
+pref("extensions.zotero2anki.ankiConnectURL", "http://127.0.0.1:8765");
+pref("extensions.zotero2anki.deck", "Default");
+pref("extensions.zotero2anki.cardType", "basic");
+pref("extensions.zotero2anki.basicNoteType", "Basic");
+pref("extensions.zotero2anki.basicFrontField", "Front");
+pref("extensions.zotero2anki.basicBackField", "Back");
+pref("extensions.zotero2anki.clozeNoteType", "Cloze");
+pref("extensions.zotero2anki.clozeTextField", "Text");
+pref("extensions.zotero2anki.clozeExtraField", "Back Extra");
+pref("extensions.zotero2anki.tags", "zotero");
+pref("extensions.zotero2anki.tagAnnotation", true);
+pref("extensions.zotero2anki.allowDuplicates", false);

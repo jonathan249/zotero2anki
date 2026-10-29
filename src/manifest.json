@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Zotero2Anki",
+  "version": "0.2.1",
+  "description": "Turn text you select or highlight in the Zotero PDF reader into Anki cards, sent to a deck you choose (via AnkiConnect).",
+  "author": "uselss",
+  "applications": {
+    "zotero": {
+      "id": "zotero2anki@uselss",
+      "update_url": "https://example.invalid/zotero2anki/updates.json",
+      "strict_min_version": "6.999",
+      "strict_max_version": "10.*"
+    }
+  }
+}
